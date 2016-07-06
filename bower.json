@@ -1,0 +1,20 @@
+{
+  "name": "skeletal",
+  "private": true,
+  "authors": [
+    "Eduardo Jönnerstig"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "animate.css": "^3.3.6",
+    "bourbon": "~4.2.6"
+  }
+}
