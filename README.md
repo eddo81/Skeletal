@@ -32,4 +32,4 @@ The following people have helped create the Skeletal starter kit:
 
 ## License
 
-The Skeletal starter kit is a free seed project and carries a [MIT license](https://github.com/eddo81/skeletal/blob/master/LICENCE?raw=true).
+The Skeletal starter kit is a free seed project and carries a [MIT license](https://github.com/eddo81/skeletal/blob/master/LICENSE?raw=true).
