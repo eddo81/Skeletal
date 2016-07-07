@@ -5,13 +5,23 @@
 
 The Skeletal starter kit consists of various front end tools such Gulp, Browserify and regular NPM scripts, configured a in a way that caters to a more modular/component based development workflow. The purpose of Skeletal is to provide tooling that is generic enough to serve as a starting point for any kind of project, while still being easy to extend if need arises.
 
+###### Features the usual suspects of front-end tooling
+
+> * Live reloding with BrowserSync
+> * SASS-compliation with node-sass
+> * Image optimization with Imagemin
+> * Liting with Eslint
+> * Transpilation, bundling and module loading with Browserify
+
 ## Installation
 
 Clone the Github repo, and run the install script:
 
-    $ git clone https://github.com/eddo81/skeletal.git
-    $ cd skeletal
-    $ npm install
+```
+$ git clone https://github.com/eddo81/skeletal.git
+$ cd skeletal
+$ npm install
+```
 
 ### Dependencies
 
@@ -25,15 +35,21 @@ You will need the following package managers to initialize the Skeletal starter 
 
 To run the project in development mode run:
 
-    $ npm start
+```
+$ npm start
+```
 
 To create a production build of the project run:
 
-    $ npm run build
+```
+$ npm run build
+```
 
 To run PageSpeed Insights on your project (provide the url in package.json) type:
 
-    $ npm run pagespeed
+```
+$ npm run pagespeed
+```
 
 ## Contributors
 
