@@ -1,4 +1,4 @@
-<img src="https://cdn.rawgit.com/eddo81/skeletal/master/src/img/skeletal-logo.svg" />
+<img src="https://cdn.rawgit.com/eddo81/skeletal/master/src/images/skeletal-logo.svg" />
 -----------
 A bare bones front end starter kit.
 
