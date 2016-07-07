@@ -1,6 +1,4 @@
 <img src="https://cdn.rawgit.com/eddo81/skeletal/master/src/images/skeletal-logo.svg" />
------------
-A bare bones front end starter kit.
 
 ## Description
 
@@ -41,6 +39,9 @@ To run PageSpeed Insights on your project (provide the url in package.json) type
 The following people have helped create the Skeletal starter kit:
 
 * [Eduardo Jönnerstig](https://github.com/eddo81)
+
+### Attribution
+Icon made by [Webalys](http://www.flaticon.com/authors/webalys) from [www.flaticon.com](http://www.flaticon.com)
 
 ## License
 
