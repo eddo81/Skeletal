@@ -1,8 +1,7 @@
 /**
- *
  *  default-task.js
  *  ===============
- *  Build production files, the default task
+ *  Builds production files.
  *
  */
 

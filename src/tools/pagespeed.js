@@ -1,8 +1,7 @@
 /**
- *
  *  pagespeed.js
  *  ============
- *  Run PageSpeed Insights
+ *  Run PageSpeed Insights.
  *
  */
 

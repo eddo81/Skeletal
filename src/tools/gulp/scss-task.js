@@ -1,8 +1,7 @@
 /**
- *
  *  scss-task.js
  *  ============
- *  Compile and automatically prefix stylesheets.
+ *  Compile, prefix and optimize stylesheets.
  *
  */
 

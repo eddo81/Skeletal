@@ -1,5 +1,4 @@
 /**
- *
  *  clean-task.js
  *  =============
  *  Clean output directory

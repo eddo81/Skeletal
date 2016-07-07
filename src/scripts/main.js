@@ -1,5 +1,4 @@
 /**
- *
  *  main.js
  *  =======
  *  This file serves as the JavaScript entry-point for the application.

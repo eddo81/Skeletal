@@ -1,8 +1,7 @@
 /**
- *
  *  js-task.js
  *  ==========
- *  Concatenate and minify JavaScript. Optionally transpiles ES2015 code to ES5.
+ *  Transpile, bundle and minify all JavaScript files with Browserify.
  *
  */
 

@@ -1,8 +1,7 @@
 /**
- *
  *  watch-task.js
  *  =============
- *  Watch files for changes & reload
+ *  Watch files and run associated tasks upon changes.
  *
  */
 

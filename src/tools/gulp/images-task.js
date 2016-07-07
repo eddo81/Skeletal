@@ -1,8 +1,7 @@
 /**
- *
  *  images-task.js
  *  ==============
- *  Optimize images
+ *  Optimize images.
  *
  */
 

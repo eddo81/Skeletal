@@ -1,4 +1,4 @@
-/*
+/**
  * _global.scss
  * ============
  *
@@ -8,7 +8,6 @@
  */
 
 * {
-  user-select: none;
 
   &:focus {
     outline-color: $color-accent !important;
@@ -56,10 +55,6 @@ ul li {
   list-style: none;
 }
 
-span {
-
-}
-
 a {
   color: $color-accent;
   transition-timing-function: ease;
@@ -88,11 +83,6 @@ hr {
 
 button[type=submit]:focus {
   color: $color-accent-shade;
-}
-
-h1, h2, h3, h4, h5, h6, p, a,
-td, th, span, li, input, textarea {
-  user-select: text;
 }
 
 input, textarea {

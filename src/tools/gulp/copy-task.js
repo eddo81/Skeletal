@@ -1,8 +1,7 @@
 /**
- *
  *  copy-task.js
  *  ============
- *  Copy all files at the root level
+ *  Copy the .htaccess and all ico, txt or xml files into the public folder.
  *
  */
 
@@ -22,7 +21,7 @@ module.exports = function (gulp, plugins, config) {
 
   gulp.task('copy', function () {
     gulp.src([
-      config.globs.root_src + '*.{ico,txt}',
+      config.globs.root_src + '*.{ico,txt,xml}',
       'node_modules/apache-server-configs/dist/.htaccess'
     ], options.dotfiles)
       .pipe(gulp.dest(config.globs.root_dest))

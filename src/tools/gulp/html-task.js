@@ -1,8 +1,7 @@
 /**
- *
  *  html-task.js
  *  ============
- *  Scan your HTML for assets & optimize them
+ *  Optimize the index.html file.
  *
  */
 

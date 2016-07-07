@@ -1,8 +1,7 @@
 /**
- *
  *  lint-task.js
  *  ============
- *  Lint JavaScript
+ *  Lint JavaScript.
  *
  */
 

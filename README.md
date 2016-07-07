@@ -22,7 +22,19 @@ You will need the following package managers to initialize the Skeletal starter 
 > * [Node & Npm](https://nodejs.org/)
 > * [Bower](https://bower.io/)
 
-## Npm Scripts
+### Npm Scripts
+
+To run the project in development mode run:
+
+    $ npm start
+
+To create a production build of the project run:
+
+    $ npm run build
+
+To run PageSpeed Insights on your project (provide the url in package.json) type:
+
+    $ npm run pagespeed
 
 ## Contributors
 
