@@ -9,14 +9,17 @@
 (function() {
   'use strict';
 
-  // require vendor libraries.
-
+  // Require vendor dependencies.
+  require('./modernizr/modernizr.js');
 
   document.addEventListener('DOMContentLoaded', () => {
 
-    // require custom components.
+    // Require custom components.
     let skeleton = require('../components/skeletal/skeletal.js');
     skeleton();
+
+    let preloader = require('../components/preloader/preloader.js');
+    preloader();
   });
 
 })();

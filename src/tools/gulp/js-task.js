@@ -34,7 +34,7 @@ module.exports = function (gulp, plugins, config) {
     },
 
     debowerify: {
-      preferNPM: true
+      preferNPM: false
     },
 
     stringify: {

@@ -57,7 +57,7 @@
 
        fonts: {
          src: src_path + folders.src.fonts + '**/*.+(ttf|woff|eof|eot|svg)',
-         dest: dest_path + folders.dest.style + folders.fonts
+         dest: dest_path + folders.dest.style + folders.dest.fonts
        },
 
        components: {

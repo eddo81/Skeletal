@@ -4,8 +4,6 @@
  *
  */
 
- @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,800';
-
  $logo-size: 10vw;
  $logo-size-min: 14rem;
 
@@ -24,7 +22,6 @@
   justify-content: center;
   align-items: center;
   background-color: #1C1D21;
-  font-family: 'Open Sans', sans-serif;
 
   figure {
     width: $logo-size;
@@ -61,7 +58,7 @@
     margin-top: 0.25em;
     margin-bottom: 0;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: bolder;
     line-height: 0.7;
     word-break: keep-all;
 

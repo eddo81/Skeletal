@@ -2,12 +2,9 @@
  * _font-variables.scss
  * ====================
  *
+ * This file serves as the entry point for all font face declarations for the application.
+ *
  */
-
- @font-face {
-   font-family: 'Roboto';
-   src: asset-url('./fonts/Roboto-Black.eot');
- }
 
 // Weights
 $font-weight-light: 300;
@@ -32,37 +29,27 @@ $font-line-height: 1.667;
 // Letter Spacing.
 $font-letter-spacing: 0.3rem;
 
-/*---------------------------
-  Font-stacks:
----------------------------*/
+// Font-faces.
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./fonts/OpenSans-Light.ttf');
+    font-weight: $font-weight-light;
+    font-style: normal;
+}
 
-// Serif
-$font-stack-antiqua: 'Book Antiqua', 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Georgia', 'serif';
-$font-stack-baskerville: 'Baskerville', 'Baskerville old face', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
-$font-stack-bodoni: 'Bodoni MT', 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
-$font-stack-cambria: 'Cambria', 'Georgia', 'serif';
-$font-stack-caslon: 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', 'Georgia', 'serif';
-$font-stack-constantia: 'Constantia', 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Georgia', 'serif';
-$font-stack-didot: 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
-$font-stack-garamond: 'Garamond', 'Baskerville', 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', 'serif';
-$font-stack-goudy: 'Goudy Old Style', 'Garamond', 'Big Caslon', 'Times New Roman', 'serif';
-$font-stack-hoefler: 'Hoefler Text', 'Baskerville old face', 'Garamond', 'Times New Roman', 'serif';
-$font-stack-lucida-bright: 'Lucida Bright', 'Georgia', 'serif';
-$font-stack-palatino: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', "Book Antiqua", 'Georgia', 'serif';
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./fonts/OpenSans-Regular.ttf');
+    font-weight: $font-weight-normal;
+    font-style: normal;
+}
 
-// Sans-serif
-$font-stack-calibri: 'Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif';
-$font-stack-candara: 'Candara', 'Calibri', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif';
-$font-stack-courier: 'Courier New', 'Courier', 'Lucida Sans Typewriter', 'Lucida Typewriter', 'monospace';
-$font-stack-franklin: 'Franklin Gothic Medium', 'Arial', 'sans-serif';
-$font-stack-futura: 'Futura', 'Trebuchet MS', 'Arial', 'sans-serif';
-$font-stack-geneva: 'Geneva', 'Tahoma', 'Verdana', 'sans-serif';
-$font-stack-gill-sans: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'sans-serif';
-$font-stack-helvetica: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
-$font-stack-lucida-grande: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', 'Verdana', 'sans-serif';
-$font-stack-optima: 'Optima', 'Segoe', 'Segoe UI', 'Candara', 'Calibri', 'Arial', 'sans-serif';
-$font-stack-roboto: 'Roboto', 'sans-serif';
-$font-stack-segoe: 'Segoe', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif';
-$font-stack-tahoma: 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
-$font-stack-trebuchet: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Tahoma', 'sans-serif';
-$font-stack-verdana: 'Verdana', 'Geneva', 'sans-serif';
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./fonts/OpenSans-ExtraBold.ttf');
+    font-weight: $font-weight-bold;
+    font-style: normal;
+}
+
+// Font-stacks.
+$font-stack-opensans: 'Open Sans', 'sans-serif';
