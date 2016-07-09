@@ -10,9 +10,9 @@
   module.exports = function() {
     const template = require('./skeletal.html');
     let main = document.getElementById('main');
+    document.body.style.overflow = 'hidden';
     document.title = 'Welcome to Skeletal!';
     main.innerHTML = template;
-
     let sideMenu = document.getElementById('side-menu');
     let openBtn = document.getElementById('open');
     let closeBtn = document.getElementById('close');

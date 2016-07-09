@@ -3,7 +3,7 @@
 
 ## Description
 
-The Skeletal starter kit consists of various front end tools such Gulp, Browserify and regular NPM scripts, configured a in a way that caters to a more modular/component based development workflow. The purpose of Skeletal is to provide tooling that is generic enough to serve as a starting point for any kind of project, while still being easy to extend if need arises.
+The Skeletal starter kit consists of various front end tools such Gulp, Browserify and regular NPM scripts, configured a in a way that caters to a more modular/component based development workflow. The purpose of Skeletal is to provide tooling that is generic enough to serve as a starting point for any kind of project, while still being easy to extend if the need arises.
 
 ###### Features the usual suspects of front-end tooling
 

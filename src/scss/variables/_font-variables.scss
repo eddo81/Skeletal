@@ -32,24 +32,42 @@ $font-letter-spacing: 0.3rem;
 // Font-faces.
 @font-face {
     font-family: 'Open Sans';
-    src: url('./fonts/OpenSans-Light.ttf');
+    src: url('./fonts/OpenSans-Light.eot');
+    src: url('./fonts/OpenSans-Light.eot?#iehack') format('eot'),
+         url('./fonts/OpenSans-Light.woff') format('woff'),
+         url('./fonts/OpenSans-Light.ttf')  format('truetype');
     font-weight: $font-weight-light;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('./fonts/OpenSans-Regular.ttf');
+    src: url('./fonts/OpenSans-Regular.eot');
+    src: url('./fonts/OpenSans-Regular.eot?#iehack') format('eot'),
+         url('./fonts/OpenSans-Regular.woff') format('woff'),
+         url('./fonts/OpenSans-Regular.ttf')  format('truetype');
     font-weight: $font-weight-normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('./fonts/OpenSans-ExtraBold.ttf');
+    src: url('./fonts/OpenSans-ExtraBold.eot');
+    src: url('./fonts/OpenSans-ExtraBold.eot?#iehack') format('eot'),
+         url('./fonts/OpenSans-ExtraBold.woff') format('woff'),
+         url('./fonts/OpenSans-ExtraBold.ttf')  format('truetype');
     font-weight: $font-weight-bold;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'MyFontFamily';
+    src: url('myfont-webfont.eot');
+    src: url('myfont-webfont.eot?#iehack') format('eot'),
+         url('myfont-webfont.woff') format('woff'),
+         url('myfont-webfont.ttf')  format('truetype'),
+         url('myfont-webfont.svg#svgFontName') format('svg');
+    }
 
 // Font-stacks.
 $font-stack-opensans: 'Open Sans', 'sans-serif';
