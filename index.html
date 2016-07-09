@@ -95,6 +95,10 @@
           -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
         }
+      }
+
+      #main {
+        display: none;
       }</style><body><!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]--><aside id=preloader class=preloader><div class=spinner></div></aside><main id=main></main><noscript id=deferred-styles><link rel=stylesheet href=css/style.css></noscript><script>var loadDeferredStyles = function() {
@@ -107,7 +111,10 @@
         preloader.addEventListener('transitionend', function() {
           preloader.parentNode.removeChild(preloader);
         });
-        preloader.classList.add('complete');
+        window.setTimeout(function(){
+          preloader.classList.add('complete');
+          document.getElementById('main').style.display = "block";
+        }, 2000);
       };
       var raf = requestAnimationFrame || mozRequestAnimationFrame ||
           webkitRequestAnimationFrame || msRequestAnimationFrame;
