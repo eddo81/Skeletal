@@ -14,7 +14,7 @@
 
   module.exports = function() {
     let preloader = document.getElementById('preloader');
-    let stylesheet = loadCSS('/css/style.css');
+    let stylesheet = loadCSS('css/style.css');
 
     preloader.addEventListener('transitionend', function() {
       preloader.parentNode.removeChild(preloader);

@@ -16,7 +16,7 @@ module.exports = function (gulp, plugins, config) {
   }
 
   gulp.task('default', ['clean'], function (callback) {
-    runSequence('scss', sequence, callback);
+    runSequence(['scss'], sequence, callback);
   });
 
 };

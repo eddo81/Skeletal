@@ -18,14 +18,14 @@
     let closeBtn = document.getElementById('close');
 
     openBtn.addEventListener('click', () => {
-      if(!sideMenu.classList.contains('expanded')) {
-        sideMenu.classList.add('expanded');
+      if(!sideMenu.classList.contains('s-expanded')) {
+        sideMenu.classList.add('s-expanded');
       }
     });
 
     closeBtn.addEventListener('click', () => {
-      if(sideMenu.classList.contains('expanded')) {
-        sideMenu.classList.remove('expanded');
+      if(sideMenu.classList.contains('s-expanded')) {
+        sideMenu.classList.remove('s-expanded');
       }
     });
 

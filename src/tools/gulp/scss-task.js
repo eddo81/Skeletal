@@ -36,7 +36,11 @@ module.exports = function (gulp, plugins, config) {
        config.globs.html.src
      ],
 
-     ignore: []
+     htmlroot: 'public',
+
+     csspath: 'css/style.css',
+
+     ignore: [/^.s-\S+$/]
    },
 
    cssnano: {
@@ -62,7 +66,7 @@ module.exports = function (gulp, plugins, config) {
         .pipe(plugins.sassGlob())
         .pipe(plugins.sass(options.sass).on('error', plugins.sass.logError))
         .pipe(plugins.autoprefixer(options.browsers))
-        .pipe(plugins.if(!config.debug, plugins.uncss(options.uncss)))
+        //.pipe(plugins.if(!config.debug, plugins.uncss(options.uncss)))
         .pipe(plugins.if(!config.debug, plugins.cssnano(options.cssnano)))
         .pipe(plugins.size(options.size))
         .pipe(plugins.if(!config.debug, plugins.sourcemaps.write('./')))
