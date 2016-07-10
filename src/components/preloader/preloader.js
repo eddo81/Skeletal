@@ -14,6 +14,7 @@
 
   module.exports = function() {
     let preloader = document.getElementById('preloader');
+    let main = document.getElementById('main');
     let stylesheet = loadCSS('css/style.css');
 
     preloader.addEventListener('transitionend', function() {
@@ -23,6 +24,7 @@
     // Code to run once the stylesheet has loaded.
     onloadCSS(stylesheet, function() {
       preloader.classList.add('complete');
+      main.style.display = "block";
     });
   };
 

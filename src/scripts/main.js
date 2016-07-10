@@ -12,14 +12,10 @@
   // Require vendor dependencies.
   require('./modernizr/modernizr.js');
 
-  document.addEventListener('DOMContentLoaded', () => {
+  // Require custom components.
+  let skeleton = require('../components/skeletal/skeletal.js');
+  skeleton();
 
-    // Require custom components.
-    let skeleton = require('../components/skeletal/skeletal.js');
-    skeleton();
-
-    let preloader = require('../components/preloader/preloader.js');
-    preloader();
-  });
-
+  let preloader = require('../components/preloader/preloader.js');
+  preloader();
 })();
