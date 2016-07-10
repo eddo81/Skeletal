@@ -6,10 +6,11 @@
   "scripts": {
     "start": "set NODE_ENV=development & gulp",
     "build": "set NODE_ENV=production & gulp",
+    "postbuild": "node src/tools/criticalCSS.js",
     "pagespeed": "node src/tools/pagespeed.js",
     "postinstall": "bower install"
   },
-  "homepage": "http://eduardojonnerstig.com/",
+  "homepage": "https://eddo81.github.io/skeletal/",
   "author": {
     "name": "Eduardo Jönnerstig",
     "email": "eduardo_jonnerstig@live.com"
@@ -28,6 +29,7 @@
     "browserify": "^13.0.1",
     "bundle-collapser": "^1.2.1",
     "colors": "^1.1.2",
+    "critical": "^0.7.3",
     "debowerify": "^1.5.0",
     "del": "^2.0.2",
     "eslint-config-google": "^0.3.0",

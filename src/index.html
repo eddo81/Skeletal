@@ -7,125 +7,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title></title>
-    <!--<noscript>
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-    </noscript>-->
-    <style>
-
-      .no-js .preloader {
-        display: none;
-      }
-
-      .preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: 100vw;
-        height: 100vh;
-        background-color: #1C1D21;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        z-index: 99999;
-        opacity: 1;
-        transition: opacity 300ms ease-in-out;
-        -webkit-transition-delay: 1s;
-        transition-delay: 1s;
-      }
-
-      .preloader.complete {
-        opacity: 0;
-      }
-
-      .spinner {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 10px;
-        margin: auto;
-        text-indent: -9999em;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #fff;
-        background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-        background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-        background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-        background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-        background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-        -webkit-animation: spin 1.4s infinite linear;
-        animation: spin 1.4s infinite linear;
-        -webkit-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-        transform: translateZ(0);
-      }
-
-      .spinner:before {
-        width: 50%;
-        height: 50%;
-        background: #fff;
-        border-radius: 100% 0 0 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: '';
-      }
-
-      .spinner:after {
-        background: #1C1D21;
-        width: 75%;
-        height: 75%;
-        border-radius: 50%;
-        content: '';
-        margin: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-      }
-
-      @-webkit-keyframes spin {
-        0% {
-          -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes spin {
-        0% {
-          -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-
-      #main {
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
 
   <body>
     <!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <aside id="preloader" class="preloader">
-      <div class="spinner"></div>
-    </aside>
     <main id="main">
-
     </main>
     <script async src="js/bundle.js"></script>
   </body>
