@@ -6,7 +6,7 @@
  */
 
  const pagespeed = require('psi').output;
- const pkg       = require('./config.js').pkg;
+ const pkg       = require('../config.js').pkg;
  const url       = (pkg.homepage !== undefined && pkg.homepage !== '') ? pkg.homepage: 'example.com';
  const options   = {
   strategy: 'mobile'

@@ -18,11 +18,15 @@
 ::selection {
   color: $color-white !important;
   background-color: $color-accent !important;
+  text-shadow: none;
 }
 
 html {
+  overflow-y: scroll;
   overflow-x: hidden;
   font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -30,7 +34,6 @@ body {
   color: $color-text-primary;
   line-height: $font-line-height;
   font-size: $font-size-caption;
-  -webkit-text-size-adjust: 100%;
   background-color: $color-white;
   word-wrap: keep-all;
   word-break: break-word;
@@ -38,12 +41,33 @@ body {
   hyphens: auto;
 }
 
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 img {
   border: 0;
   outline: 0;
   -ms-interpolation-mode: bicubic;
   display: block;
+  height: auto;
+  vertical-align: middle;
   width: 100%;
+
+  @media(min-width: $screen-sm) {
+    margin: 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+svg:not(:root) {
+  overflow: hidden;
 }
 
 ul, ol, dl {
@@ -77,8 +101,10 @@ hr {
   border: 0;
   background-color: transparent;
   border-bottom: 1px solid $color-text-primary;
-  opacity: 0.4;
-  margin: $font-size-base 0;
+  margin: 1em 0;
+  display: block;
+  height: 1px;
+  padding: 0;
 }
 
 button[type=submit]:focus {
@@ -116,4 +142,37 @@ input, textarea {
     border-color: $color-accent !important;
     outline: 0;
   }
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Forms */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"]
+select {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }

@@ -6,7 +6,7 @@
  */
 
 const critical = require('critical');
-const config   = require('./config.js');
+const config   = require('../config.js');
 const options  = {
   critical: {
     base: config.globs.root_dest,

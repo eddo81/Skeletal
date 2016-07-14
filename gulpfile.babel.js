@@ -10,7 +10,7 @@
  const gulp          = require('gulp');
  const autoLoadTasks = require('gulp-autoload-tasks');
  const config        = require('./src/tools/config.js');
- const buildInfo     = require('./src/tools/buildinfo.js')(config);
+ const buildInfo     = require('./src/tools/npm-scripts/buildinfo.js')(config);
 
  let plugins         = require('gulp-load-plugins')(gulp);
  plugins.browserSync = require('browser-sync');

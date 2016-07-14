@@ -15,8 +15,10 @@
   window.addEventListener('load', () => {
 
     // Require custom components.
-    let skeleton = require('../components/skeletal/skeletal.js');
-    skeleton();
+     let skeleton = require('../components/skeletal/skeletal.js');
+     skeleton();
+
+    // Require custom components.
 
   });
 
