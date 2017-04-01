@@ -1,0 +1,71 @@
+/**
+ * _sections.scss
+ * ==============
+ *
+ *
+ */
+
+.FONDAB_section {
+
+  &--raised {
+    background: $white-color;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    margin: -1 * ($baseline * 2) ($baseline / 2) ($baseline * 2) ($baseline / 2);
+    border-radius: ($border-radius--sm * 4);
+    @include shadow(6);
+
+    .container, .container-fluid {
+      padding-left: $baseline;
+      padding-right: $baseline;
+
+      @media (min-width: $screen--lg) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    @media (min-width: $screen--sm) {
+      .container {
+        width: 75rem - $baseline;
+      }
+    }
+
+    @media (min-width: $screen--md) {
+      margin: -1 * ($baseline * 2) $baseline ($baseline * 2) $baseline;
+
+      .container {
+        width: 97rem - ($baseline * 2);
+      }
+    }
+
+    @media (min-width: $screen--lg) {
+      margin: -1 * ($baseline * 2) $baseline ($baseline * 2) $baseline;
+
+      .container {
+        width: 117rem - ($baseline * 2);
+      }
+    }
+  }
+
+  &--padding {
+    padding-top: $baseline;
+    padding-bottom: $baseline;
+
+    @media(min-width: $screen--sm) {
+      padding-top: ($baseline * 3);
+      padding-bottom: ($baseline * 3);
+    }
+  }
+
+  &--no-header {
+    padding-top: ($baseline * 3);
+    padding-bottom: $baseline;
+
+    @media(min-width: $screen--sm) {
+      padding-top: ($baseline * 4);
+      padding-bottom: ($baseline * 3);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+/**
+ * _roboto.scss
+ * =============
+ *
+ * Include the Roboto font-face.
+ *
+ */
+
+@font-face {
+    font-family: "Roboto";
+    src: url('#{$font-path}/Roboto/Roboto-Light.eot');
+    src: local('Roboto-Light'),
+         local('Roboto Light'),
+         url('#{$font-path}/Roboto/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-path}/Roboto/Roboto-Light.woff') format('woff'),
+         url('#{$font-path}/Roboto/Roboto-Light.ttf')  format('truetype'),
+         url('#{$font-path}/Roboto/Roboto-Light.svg#roboto') format('svg');
+    font-weight: $font-weight--light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('#{$font-path}/Roboto/Roboto-Bold.eot');
+    src: local('Roboto-Bold'),
+         local('Roboto Bold'),
+         url('#{$font-path}/Roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-path}/Roboto/Roboto-Bold.woff') format('woff'),
+         url('#{$font-path}/Roboto/Roboto-Bold.ttf')  format('truetype'),
+         url('#{$font-path}/Roboto/Roboto-Bold.svg#roboto') format('svg');
+    font-weight: $font-weight--bold;
+    font-style: normal;
+}

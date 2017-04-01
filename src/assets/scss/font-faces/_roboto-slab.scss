@@ -1,0 +1,22 @@
+/**
+ * _roboto-slab.scss
+ * =================
+ *
+ * Include the Roboto-Slab font-face.
+ *
+ */
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url('#{$font-path}/RobotoSlab/RobotoSlab-Bold.eot');
+    src: local('RobotoSlab-Bold'),
+         local('RobotoSlab Bold'),
+         url('#{$font-path}/RobotoSlab/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-path}/RobotoSlab/RobotoSlab-Bold.woff') format('woff'),
+         url('#{$font-path}/RobotoSlab/RobotoSlab-Bold.ttf')  format('truetype'),
+         url('#{$font-path}/RobotoSlab/RobotoSlab-Bold.svg#robotoslab') format('svg');
+    font-weight: $font-weight--bold;
+    font-style: normal;
+}
+
+

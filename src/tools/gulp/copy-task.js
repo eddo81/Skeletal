@@ -7,25 +7,27 @@
 
 module.exports = function (gulp, plugins, config) {
 
-  const options = {
+  gulp.task('copy', (callback) => {
+    const options = {
+      dotfiles: {
+        dot: true
+      }
+    };
 
-    dotfiles: {
-      dot: true
-    },
-
-    size: {
-      title: 'copy'
-    }
-
-  };
-
-  gulp.task('copy', function () {
     gulp.src([
-      config.globs.root_src + '*.{ico,txt,xml}',
-      'node_modules/apache-server-configs/dist/.htaccess'
+      config.globs.root_src + '*.{ico,txt,xml,png,svg,json}',
+      'node_modules/apache-server-configs/dist/.htaccess',
     ], options.dotfiles)
-      .pipe(gulp.dest(config.globs.root_dest))
-      .pipe(plugins.size(options.size))
-  });
+      .pipe(gulp.dest(config.globs.root_dest));
 
+    gulp.src([config.globs.fonts.src])
+      .pipe(plugins.newer(config.globs.fonts.dest))
+      .pipe(gulp.dest(config.globs.fonts.dest));
+
+    gulp.src([config.globs.videos.src])
+      .pipe(plugins.newer(config.globs.videos.dest))
+      .pipe(gulp.dest(config.globs.videos.dest));
+
+      callback();
+  });
 };

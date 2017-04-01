@@ -5,20 +5,23 @@
  *
  */
 
+require('es6-promise').polyfill();
+
+ /* eslint-disable no-undef, no-console*/
+ if (DEBUG_MODE) {
+  console.log('Debug mode');
+ }
+ /* eslint-enable no-undef, no-console */
+
 /* eslint-env browser */
 (function() {
   'use strict';
 
-  // Require vendor dependencies.
-  require('./modernizr/modernizr.js');
-
   window.addEventListener('load', () => {
+    let app = document.getElementById('app');
 
-    // Require custom components.
-     let skeleton = require('../components/skeletal/skeletal.js');
-     skeleton();
-
-    // Require custom components.
+    let skeletal = require('../framework/views/skeletal/skeletal.js');
+    skeletal();
 
   });
 

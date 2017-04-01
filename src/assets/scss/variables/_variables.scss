@@ -1,0 +1,70 @@
+/**
+ * _variables.scss
+ * ===============
+ *
+ */
+
+// Animations
+$transition--sm: 300ms;
+$transition--md: 600ms;
+$transition--lg: 900ms;
+
+// Baseline
+$font-size--base: 1.6rem !default;
+$font-size--headings: (3.6rem, 3.2rem, 2.8rem, 2.0rem, 1.8rem, $font-size--base);
+$font-size--sm: 1.2rem !default;
+$font-size--md: 1.4rem   !default;
+$font-size--lg: 2rem   !default;
+
+$line-height: 1.5;
+$baseline: ($font-size--base * 1.5) !default;
+
+// Border radius
+$border-radius--sm: 0.2rem !default;
+$border-radius--lg: 100% !default;
+
+// Breakpoints
+$screen--xs: 480px !default;
+$screen--sm: 768px !default;
+$screen--md: 992px !default;
+$screen--lg: 1200px !default;
+
+// Colors
+$black-color: #000;
+$white-color: #FFF;
+$grey-color: #E5E5E5;
+$body-color: $grey-color;
+$accent-color: #00a39e;
+$secondary-accent-color: #0a3853;
+$primary-text-color: rgba(#3C4858, 1); //100 if color is #FFF
+$secondary-text-color: rgba($black-color, 0.87); //0.54//70 if color is #FFF
+$hint-text-color: rgba($black-color, 0.38); //50 if color is #FFF
+$divider-color: rgba($black-color, 0.12);
+$link-color: $accent-color;
+
+// Fonts
+$font-family--heading:      'Roboto', 'Helvetica Neue','Segoe UI', 'Verdana', sans-serif !default;
+$font-family--body:         'Roboto', 'Helvetica Neue','Segoe UI', 'Verdana', sans-serif !default;
+$font-family--serif:        'Roboto Slab', serif !default;
+$font-family--monospace:    'Consolas', 'Monaco', 'Courier New', monospace !default;
+$font-family--awesome:      'FontAwesome' !default;
+$font-family--icon:         'Material Icons' !default;
+$font-path: './fonts';
+
+$font-weight--light:    300 !default;
+//$font-weight--normal:   400 !default;
+//$font-weight--semibold: 500 !default;
+$font-weight--bold:     700 !default;
+
+// Z-index
+$z-index--0:   -1;
+$z-index--1:   100;
+$z-index--2:   200;
+$z-index--3:   300;
+$z-index--4:   400;
+$z-index--5:   500;
+$z-index--6:   600;
+$z-index--7:   700;
+$z-index--8:   800;
+$z-index--9:   900;
+$z-index--10: 1000;

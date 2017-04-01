@@ -1,0 +1,408 @@
+/**
+* _base.scss
+* ==========
+*
+* All global styles goes in here. This file should only contain
+* <element> selectors, no #id or .class selectors.
+*
+*/
+
+/* uncss:ignore */
+::selection {
+ color: $white-color !important;
+ background-color: $accent-color !important;
+ text-shadow: none;
+}
+
+/* uncss:ignore */
+html {
+ overflow-y: scroll;
+ overflow-x: hidden;
+ height: 100%;
+ font-size: 62.5%;
+ font-feature-settings: 'kern' 1;
+ font-kerning: normal;
+ text-rendering: optimizeLegibility;
+ box-sizing: border-box;
+ -webkit-font-smoothing: antialiased;
+ -webkit-text-size-adjust: 100%;
+ -webkit-tap-highlight-color: rgba(0,0,0,0);
+ -ms-overflow-style: scrollbar;
+ -ms-text-size-adjust: 100%;
+ -moz-osx-font-smoothing: grayscale;
+
+  /*@media(min-width: $screen--md) {
+    font-size: 78.125%;
+  }*/
+}
+
+/* uncss:ignore */
+body {
+  font-family: $font-family--body;
+  color: $secondary-text-color;
+  line-height: $line-height;
+  font-size: $font-size--base;
+  font-weight: $font-weight--light;
+  background-color: $body-color;
+  min-height: 100%;
+  -webkit-backface-visibility: hidden;
+}
+
+// Links
+/* uncss:ignore */
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  color: $accent-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: $transition--sm;
+  transition-property: color, border-color, background-color;
+  font-size: inherit;
+
+  &:hover, &:active, &:focus {
+    outline-width: 0;
+    border: 0;
+  }
+
+  &:hover, &:active {
+    color: darken($accent-color, 15%);
+  }
+
+  &:hover:active {
+    color: darken($accent-color, 45%);
+  }
+
+  &:active {
+    color: darken($accent-color, 30%);
+  }
+}
+
+// Lists
+/* uncss:ignore */
+dl, ol, ul {
+  list-style: none;
+  margin-left: $baseline;
+  padding: 0 0 $baseline;
+
+  dl, ol, ul {
+    padding-bottom: 0;
+  }
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+// Images
+/* uncss:ignore */
+img, video {
+  -ms-interpolation-mode: bicubic;
+  width: 100%;
+  vertical-align: middle;
+  height: auto;
+  display: inline;
+
+  @media(min-width: $screen--sm) {
+    margin: 0 auto;
+  }
+}
+
+figure {
+  margin: 0 auto;
+  padding-bottom: $baseline;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+/* uncss:ignore */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// Buttons
+/* uncss:ignore */
+button, input[type='button'], input[type='reset'], input[type='submit'] {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: $font-weight--light;
+  height: ($baseline * 1.5);
+  line-height: ($baseline * 1.5);
+  max-width: 100%;
+  padding: 0 $baseline;
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+  width: auto;
+  margin: 0 auto;
+  font-size: $font-size--sm;
+
+  &:hover, &:active, &:focus {
+    outline: 0;
+  }
+
+  &:link, &:visited {
+    text-decoration: none;
+  }
+
+  &[disabled] {
+    cursor: default;
+    opacity: 0.65;
+    box-shadow: none;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, rgba($black-color, 0.2) 15%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale3d(10, 10, 10);
+    opacity: 0;
+    transition: transform $transition--md cubic-bezier(easing(21)), opacity 1s cubic-bezier(easing(21));
+  }
+
+  &:active:after {
+    transform: scale3d(0, 0, 0);
+    opacity: 0.4;
+    transition: 0s;
+  }
+}
+
+// Dividers
+/* uncss:ignore */
+hr {
+  height: ($baseline * 2);
+  margin-bottom: $baseline;
+  box-sizing: content-box;
+
+  &:before {
+    background-color: $divider-color;
+    content: '';
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+}
+
+// Quotes
+/* uncss:ignore */
+blockquote {
+  border-left: 3px solid $accent-color;
+  margin: 0 0 $baseline;
+  padding: ($baseline / 2);
+
+  *:last-child {
+    padding-bottom: 0;
+  }
+}
+
+q {
+
+  &:before, &:after {
+    content: "'";
+  }
+
+  & > q {
+    font-style: italic;
+  }
+}
+
+/* uncss:ignore */
+code, kbd, samp {
+  padding: ($baseline / 6);
+  white-space: nowrap;
+}
+
+/* uncss:ignore */
+pre {
+  line-height: $line-height;
+  padding: ($baseline / 2);
+  margin: 0 0 $baseline;
+
+  code, samp, kbd {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  & > code {
+    border-radius: 0;
+    display: block;
+    padding: 1rem 1.5rem;
+    white-space: pre;
+  }
+}
+
+// Tables
+/* uncss:ignore */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: $baseline;
+  width: 100%;
+
+  td, th {
+    border-bottom: 1px solid $divider-color;
+    padding: ($baseline / 2) - 0.1rem $baseline ($baseline / 2) $baseline;
+    text-align: left;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  th {
+    font-weight: $font-weight--light;
+    color: $primary-text-color;
+    font-size: $font-size--lg;
+  }
+}
+
+// Forms
+/* uncss:ignore */
+input[type='email'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], textarea, select {
+  appearance: none;
+  background-color: $white-color;
+  border: 1px solid rgba($divider-color, 0.2);
+  border-radius: $border-radius--sm;
+  box-shadow: none;
+  box-sizing: inherit; // Forced to replace inherit values of the normalize.css
+  height: ($baseline * 2);
+  padding: ($baseline / 4) ($baseline / 2); // The .6rem vertically centers text on FF, ignored by Webkit
+  width: 100%;
+  transition: border-color $transition--sm ease-in-out;
+
+  &:focus {
+    border-color: $accent-color;
+    outline: 0;
+  }
+}
+
+/* uncss:ignore */
+select {
+  background-color: $white-color;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#{$divider-color}" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding-right: $baseline;
+  text-transform: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#{$accent-color}" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
+  }
+}
+
+/* uncss:ignore */
+textarea {
+  min-height: ($baseline * 3);
+  overflow: auto;
+  resize: vertical;
+}
+
+/* uncss:ignore */
+legend {
+  color: inherit;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* uncss:ignore */
+label, legend {
+  font-weight: $font-weight--bold;
+  color: $hint-text-color;
+}
+
+/* uncss:ignore */
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+/* uncss:ignore */
+input[type="file"] {
+  height: ($baseline * 2);
+  padding: ($baseline / 4) 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    outline: 0;
+  }
+}
+
+/* uncss:ignore */
+form {
+  padding: $baseline 0;
+}
+
+/* uncss:ignore */
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+ color: inherit;
+ -webkit-text-fill-color: inherit;
+ -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+/* uncss:ignore */
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* uncss:ignore */
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* uncss:ignore */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* uncss:ignore */
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* uncss:ignore */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/* uncss:ignore */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}

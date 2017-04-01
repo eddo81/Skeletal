@@ -1,0 +1,170 @@
+/**
+* _reset.scss
+* ===========
+*
+*
+*/
+
+/* uncss:ignore */
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  &:before, &:after {
+    box-sizing: inherit;
+  }
+
+  &:focus {
+    outline-color: $accent-color !important;
+    box-shadow: none !important;
+  }
+}
+
+/* uncss:ignore */
+a, button, input[type='button'], input[type='reset'], input[type='submit'] {
+  text-decoration: none;
+}
+
+/* uncss:ignore */
+audio:not([controls]), [hidden], template {
+  height: 0;
+  display: none;
+}
+
+/* uncss:ignore */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/* uncss:ignore */
+abbr, blockquote, caption, cite, dfn, dt, em, figcaption, i, q {
+  font-style: italic;
+}
+
+/* uncss:ignore */
+abbr, dfn {
+  border-bottom: 1px dotted $divider-color;
+  cursor: default;
+}
+
+/* uncss:ignore */
+audio, button, canvas, input[type='button'], input[type='reset'], input[type='submit'], progress, video {
+  display: inline-block;
+}
+
+/* uncss:ignore */
+article, aside, details, figcaption, figure, footer, header, input, label, main, menu, nav, section, select, summary, textarea {
+  display: block;
+}
+
+/* uncss:ignore */
+b, optgroup, strong, var {
+  font-weight: $font-weight--bold;
+}
+
+/* uncss:ignore */
+body, hr, sub, sup {
+  position: relative;
+}
+
+/* uncss:ignore */
+button, caption, figcaption, input[type='button'], input[type='reset'], input[type='submit'] {
+  text-align: center;
+}
+
+/* uncss:ignore */
+button, code, input[type='button'], input[type='reset'], input[type='submit'], kbd, pre, samp, table {
+  border-radius: $border-radius--sm;
+}
+
+/* uncss:ignore */
+button, hr, input {
+  overflow: visible;
+}
+
+/* uncss:ignore */
+button, html, input, select, textarea {
+  font-family: inherit;
+}
+
+/* uncss:ignore */
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* uncss:ignore */
+button, input:not([type=radio],[type=checkbox]), label, select, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* uncss:ignore */
+button, input, optgroup, select, textarea {
+  font: inherit;
+}
+
+/* uncss:ignore */
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* uncss:ignore */
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* uncss:ignore */
+caption, figcaption, small, sub, sup {
+  font-size: $font-size--sm;
+  color: $hint-text-color;
+}
+
+/* uncss:ignore */
+code, samp, kbd, pre {
+  background-color: $divider-color;
+  font-size: $font-size--sm;
+  color: $primary-text-color;
+  font-family: $font-family--monospace;
+  line-height: 1;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+/* uncss:ignore */
+dd {
+  text-indent: $baseline;
+}
+
+/* uncss:ignore */
+small, sub, sup {
+  line-height: 1;
+}
+
+/* uncss:ignore */
+sub {
+  bottom: -0.25em;
+}
+
+/* uncss:ignore */
+sup {
+  top: -0.5em;
+}
+
+/* uncss:ignore */
+progress, sub, sup {
+  vertical-align: baseline;
+}
+
+/* uncss:ignore */
+[tabindex="-1"]:focus {
+  outline: none !important;
+}

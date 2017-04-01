@@ -5,28 +5,19 @@
  *
  */
 
-module.exports = function (gulp, plugins, config) {
+module.exports = (gulp, plugins, config) => {
 
-  const options = {
+  gulp.task('images', () => {
+    const options = {
+      imagemin: {
+        progressive: true,
+        interlaced: true
+      }
+    };
 
-    imagemin: {
-      progressive: true,
-      interlaced: true
-    },
-
-    size: {
-      title: 'images'
-    }
-
-  };
-
-  gulp.task('images', function () {
-
-    gulp.src(config.globs.img.src)
+    return gulp.src(config.globs.img.src)
       .pipe(plugins.newer(config.globs.img.dest))
-      .pipe(plugins.if(!config.debug, plugins.imagemin(options.imagemin)))
-      .pipe(gulp.dest(config.globs.img.dest))
-      .pipe(plugins.size(options.size))
+      .pipe(!config.debug ? plugins.imagemin() : plugins.util.noop())
+      .pipe(gulp.dest(config.globs.img.dest));
   });
-
 };

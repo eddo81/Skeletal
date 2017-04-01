@@ -1,0 +1,31 @@
+/**
+ * _typography.scss
+ * ================
+ *
+ *
+ */
+
+
+ @for $i from 1 through length($font-size--headings) {
+  /* uncss:ignore */
+    h#{$i} {
+      font-family: $font-family--heading;
+      font-weight: $font-weight--light;
+      color: $primary-text-color;
+      font-size: #{nth($font-size--headings, $i)};
+
+      @if $i <= 3 {
+        line-height: ($baseline * 2);
+        padding: ($font-size--base / 2) 0 $font-size--base;
+      }
+
+      @else {
+        padding: $baseline 0;
+      }
+    }
+ }
+
+/* uncss:ignore */
+ p {
+   padding-bottom: $baseline;
+ }

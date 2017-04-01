@@ -1,0 +1,39 @@
+{
+  "root": true,
+
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module"
+  },
+
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+
+  "globals": {
+    "Promise": true,
+    "Uint8Array": true,
+    "ArrayBuffer": true,
+    "FileReaderSync": true,
+    "importScripts": true
+  },
+
+  "rules": {
+    "no-empty": 1,
+    "no-unused-vars": 1,
+    "no-console": 1,
+    "semi": 1,
+    "curly": 1,
+    "space-unary-ops": 1,
+    "no-underscore-dangle": 1,
+    "quotes": [1, "single"]
+  }
+}

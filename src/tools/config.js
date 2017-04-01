@@ -11,74 +11,98 @@
    const pkg          = require('../../package.json');
    const src_path     = 'src/';
    const dest_path    = 'public/';
-   const folders      = {
+   const namespace    = 'S_';
+   const folders = {
+     src: new function () {
+       this.assets     = 'assets/';
+       this.scripts    = 'scripts/';
+       this.tools      = 'tools/';
+       this.framework  = 'framework/';
 
-    src: {
-      components: 'components/',
-      style: 'scss/',
-      scripts: 'scripts/',
-      images: 'images/',
-      fonts: 'fonts/',
-      tools: 'tools/'
-    },
+       this.style      = this.assets + 'scss/';
+       this.images     = this.assets + 'images/';
+       this.videos     = this.assets + 'videos/';
+       this.fonts      = this.assets + 'fonts/';
+       this.gulp       = this.tools + 'gulp/';
+       this.webpack    = this.tools + 'webpack/';
+     },
 
-    dest:{
-      style: 'css/',
-      scripts: 'js/',
-      images: 'img/',
-      fonts: 'fonts/',
-    }
-
-  };
+     dest: new function () {
+       this.style   = 'css/';
+       this.scripts = 'js/';
+       this.images  = 'img/';
+       this.videos  = 'videos/';
+       this.fonts   = this.style + 'fonts/';
+     }
+   };
 
    module.exports = {
 
+    tools: {
+
+      webpack: {
+        root: './' + src_path + folders.src.webpack, //check this
+        exclude: /(node_modules|bower_components)/,
+        extensions: {
+          js: [/\.(js|es6)$/i],
+          text: [/\.(html|xml|txt)$/i]
+        }
+      },
+
+      gulp: {
+        root: './' + src_path + folders.src.gulp
+      },
+
+      browsersync: {
+        port: 3000,
+        proxy: undefined
+      },
+
+      uncss: {
+        ignore: [
+          RegExp('^(\.' + namespace + '|#' + namespace + ')+'),
+          /^(\.container|\.row|\.col)+/,
+          /^(\.fa|\.fa-)+/
+        ]
+      }
+
+    },
+
      globs: {
 
-       html: {
-         src: src_path + 'index.html',
-         dest: dest_path
-       },
+      html: {
+        src: src_path + 'index.html',
+        dest: dest_path
+      },
 
-       js: {
-         src: src_path + folders.src.scripts + 'main.js',
-         dest: dest_path + folders.dest.scripts
-       },
+      js: {
+        src: folders.src.scripts + 'main.js',
+        dest: folders.dest.scripts + 'bundle.js'
+      },
 
-       css: {
+      css: {
         src: src_path + folders.src.style + 'style.scss',
         dest: dest_path + folders.dest.style
-       },
+      },
 
-       img: {
-         src: src_path + folders.src.images + '**/*.+(png|jpg|jpeg|gif|svg)',
-         dest: dest_path + folders.dest.images
-       },
+      img: {
+        src: src_path + folders.src.images + '**/*.+(png|jpg|jpeg|gif|svg|tiff|bmp|ico)',
+        dest: dest_path + folders.dest.images
+      },
 
-       fonts: {
-         src: src_path + folders.src.fonts + '**/*.+(ttf|woff|eof|eot|svg)',
-         dest: dest_path + folders.dest.style + folders.dest.fonts
-       },
+      videos: {
+        src: src_path + folders.src.videos + '**/*.+(mov|avi|ogg|ogv|webm|flv|swf|mp4)',
+        dest: dest_path + folders.dest.videos
+      },
 
-       components: {
+      fonts: {
+        src: src_path + folders.src.fonts + '**/*.+(ttf|woff|woff2|eof|eot|svg)',
+        dest: dest_path + folders.dest.fonts
+      },
 
-        html: {
-          src: src_path + folders.src.components + '**/*.html'
-        },
-
-        js: {
-          src: src_path + folders.src.components + '**/*.js'
-        },
-
-        css: {
-          src: src_path + folders.src.components + '**/*.scss'
-        }
-
-       },
-
-       root_src: src_path,
-       root_dest: dest_path,
-       folders: folders
+      root_src: src_path,
+      root_dest: dest_path,
+      folders: folders
      },
 
      debug: debug,

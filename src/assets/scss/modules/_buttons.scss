@@ -1,0 +1,125 @@
+/**
+ * _buttons.scss
+ * =============
+ *
+ *
+ */
+
+// Placeholders.
+%button-placeholder {
+  color: $white-color;
+  font-weight: $font-weight--light;
+  font-size: $font-size--md;
+  transition: box-shadow $transition--sm ease-in;
+
+  &:hover, &:active, &:focus {
+    color: $white-color;
+  }
+
+  &:after {
+    background-image: radial-gradient(circle, $white-color 15%, transparent 10.01%);
+  }
+
+  &[disabled] {
+    box-shadow: none !important;
+  }
+}
+
+/* uncss:ignore */
+.FONDAB_button {
+  @extend %button-placeholder;
+  background-color: $divider-color;
+  @include shadow(1, $black-color);
+
+  &:hover, &:active, &:focus {
+    @include button-shadow($black-color);
+  }
+
+  &--accent {
+    @extend %button-placeholder;
+    background-color: $accent-color;
+    @include shadow(1, $accent-color);
+
+    &:hover, &:active, &:focus {
+      @include button-shadow($accent-color);
+    }
+
+    &[disabled] {
+
+      &:focus, &:hover {
+        background-color: $accent-color;
+        border-color: $accent-color;
+      }
+    }
+  }
+
+  &--default {
+    @extend %button-placeholder;
+    background-color: $divider-color;
+    @include shadow(1, $divider-color);
+
+    &:hover, &:active, &:focus {
+      @include button-shadow($divider-color);
+    }
+
+    &[disabled] {
+
+      &:focus, &:hover {
+        background-color: $accent-color;
+        border-color: $accent-color;
+      }
+    }
+  }
+
+  &--sm {
+    height: $baseline !important;
+    line-height: $baseline !important;
+    font-size: 1rem !important;
+    padding: 0 ($baseline / 2) !important;
+    letter-spacing: 1px;
+  }
+
+  &--lg {
+    height: ($baseline * 2) !important;
+    line-height: ($baseline * 2) !important;
+    font-size: $font-size--base;
+  }
+
+  &--rounded {
+    border-radius: ($baseline * 2) !important;
+  }
+
+  &--simple {
+    color: $accent-color;
+    background-color: transparent;
+    box-shadow: none !important;
+
+    &:hover, &:active, &:focus {
+      color: $accent-color;
+      box-shadow: none !important;
+    }
+
+    &:after {
+      background-image: radial-gradient(circle, rgba($accent-color, 0.2) 15%, transparent 10.01%);
+    }
+  }
+
+  .FONDAB_material_icon {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    padding-right: ($baseline / 4);
+    font-size: $font-size--lg;
+  }
+}
+
+input[type="submit"].FONDAB_button {
+
+  &--accent {
+    background-color: $accent-color !important;
+  }
+
+  &--lg {
+    font-size: $font-size--base !important;
+  }
+}

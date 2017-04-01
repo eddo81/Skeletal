@@ -1,0 +1,11 @@
+/**
+ * _animated-mixin.scss
+ * ====================
+ *
+ */
+
+@mixin animated($duration: 1s, $visibility: hidden) {
+  animation-duration: $duration;
+  animation-fill-mode: both;
+  visibility: $visibility;
+}

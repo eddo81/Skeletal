@@ -5,13 +5,13 @@
  *
  */
 
-module.exports = function (gulp, plugins, config) {
+module.exports = (gulp, plugins, config) => {
 
-  gulp.task('lint', function () {
-    gulp.src([config.globs.root_src + config.globs.folders.src.scripts + '**/*.js', config.globs.components.js.src])
+  gulp.task('lint', (callback) => {
+    gulp.src([config.globs.root_src + config.globs.folders.src.scripts + '**/*.js', config.globs.root_src + config.globs.folders.src.vue + '**/*.js'])
       .pipe(plugins.eslint())
       .pipe(plugins.eslint.format())
-      .pipe(plugins.if(!plugins.browserSync.active, plugins.eslint.failOnError()))
+      .pipe(!plugins.browserSync.active ? plugins.eslint.failOnError() : plugins.util.noop());
+      callback();
   });
-
 };

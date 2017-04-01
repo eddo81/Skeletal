@@ -1,0 +1,20 @@
+/**
+ * _colored_bg-mixin.scss
+ * ======================
+ *
+ */
+
+@mixin colored-bg() {
+  background-position: top center;
+  background-size: 540% 450%;
+  background-color: $accent-color;
+  background-origin: padding-box;
+  background-image: radial-gradient(ellipse at center, $accent-color 0%, rgba(#0f1f58, 0.7) 100%);
+
+  @media(min-width: $screen--sm) {
+    background-position: center center;
+    background-size: 100% 300%;
+  }
+
+  //background-color: $accent-color;
+}

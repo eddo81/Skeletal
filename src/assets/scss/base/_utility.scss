@@ -1,0 +1,257 @@
+/**
+* _utility.scss
+* =============
+*
+* This file contains various helper-classes.
+*
+*
+*/
+
+// Contextual backgrounds
+.S_background {
+
+  &--muted {
+    background-color: $grey-color;
+  }
+
+  &--white {
+    background-color: $white-color;
+  }
+
+  &--accent {
+    background-color: $accent-color;
+  }
+
+  &--blue {
+    background-color: $secondary-accent-color;
+  }
+}
+
+// Padding
+.S_padding {
+
+  &--none {
+    padding: 0;
+  }
+
+  &_top--none {
+    padding-top: 0;
+  }
+
+  &_left--none {
+    padding-left: 0;
+  }
+
+  &_bottom--none {
+    padding-bottom: 0;
+  }
+
+  &_right--none {
+    padding-right: 0;
+  }
+
+  &_top--base {
+    padding-top: $baseline;
+  }
+
+  &_bottom--base {
+    padding-bottom: $baseline;
+  }
+
+  &--base {
+    padding: $baseline;
+  }
+}
+
+.S_margin {
+
+  &--none {
+    margin: 0;
+  }
+
+  &_top--none {
+    margin-top: 0;
+  }
+
+  &_left--none {
+    margin-left: 0;
+  }
+
+  &_bottom--none {
+    margin-bottom: 0;
+  }
+
+  &_right--none {
+    margin-right: 0;
+  }
+}
+
+// Display
+.S_display {
+
+  &--none {
+    display: none;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--inline {
+    display: block;
+  }
+
+  &--inline-block {
+    display: inline-block;
+  }
+}
+
+// Visibility
+.S_visibility {
+
+  &--hidden {
+    visibility: hidden;
+  }
+
+  &--visible {
+    visibility: visible;
+  }
+}
+
+// Floats
+.S_float {
+
+  &--left {
+    float: left !important;
+  }
+
+  &--right {
+    float: right !important;
+  }
+
+  &--none {
+    float: none !important;
+  }
+}
+
+.S_clearfix {
+  @include clearfix;
+}
+
+.S_text {
+
+  // Text sizes
+  &--sm {
+    font-size: $font-size--sm;
+  }
+
+  &--md {
+    font-size: $font-size--md;
+  }
+
+  &--lg {
+    font-size: $font-size--lg;
+  }
+
+  // Text alignment
+  &--left {
+    text-align: left !important;
+  }
+
+  &--right {
+    text-align: right !important;
+  }
+
+  &--center {
+    text-align: center !important;
+  }
+
+  &--justify {
+    text-align: justify !important;
+  }
+
+  // Text transformation
+  &--lowercase {
+    text-transform: lowercase !important;
+  }
+
+  &--uppercase {
+    text-transform: uppercase !important;
+  }
+
+  &--capitalize {
+    text-transform: capitalize !important;
+  }
+
+  &--regular {
+    text-transform: none !important;
+  }
+
+  &--nowrap {
+    white-space: nowrap !important;
+  }
+
+  // Weight and italics
+  &--light {
+    font-weight: $font-weight--light;
+  }
+
+  &--bold {
+    font-weight: $font-weight--bold;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  // Text colors
+  &--white {
+    color: $white-color !important;
+  }
+
+  &--accent {
+    color: $accent-color !important;
+  }
+
+  &--secondary {
+    color: $secondary-text-color !important;
+  }
+
+  &--primary {
+    color: $primary-text-color !important;
+  }
+
+  &--muted {
+    color: $hint-text-color;
+  }
+
+  &--truncate {
+    @include text-truncate;
+  }
+}
+
+// Title
+.S_title {
+  font-family: $font-family--serif;
+  font-weight: $font-weight--bold;
+}
+
+// Icons
+.S_material_icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: $baseline;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: 'liga';
+}
+
+#app {
+  display: block !important;
+}
