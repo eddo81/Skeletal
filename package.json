@@ -1,7 +1,7 @@
 {
   "name": "Skeletal",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A bare bones front end starter kit.",
   "main": "main.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
@@ -12,12 +12,12 @@
   },
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Eduardo Jönnerstig",
+    "email": "eduardo_jonnerstig@live.com"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/eddo81/skeletal"
   },
   "license": "ISC",
   "devDependencies": {

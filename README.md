@@ -3,7 +3,7 @@
 
 ## Description
 
-The Skeletal starter kit consists of various front end tools such Gulp, Browserify and regular NPM scripts, configured a in a way that caters to a more modular/component based development workflow. The purpose of Skeletal is to provide tooling that is generic enough to serve as a starting point for any kind of project, while still being easy to extend if the need arises.
+The Skeletal starter kit consists of various front end tools such Gulp 4, Webpack 2 and regular NPM scripts, configured in a way that caters to a more modular/component based development workflow. The purpose of Skeletal is to provide tooling that is generic enough to serve as a starting point for any kind of project, while still being easy to extend if the need arises.
 
 ###### Features the usual suspects of front-end tooling
 
@@ -11,7 +11,7 @@ The Skeletal starter kit consists of various front end tools such Gulp, Browseri
 > * SASS-compliation with node-sass
 > * Image optimization with Imagemin
 > * Liting with Eslint
-> * Transpilation, bundling and module loading with Browserify
+> * Transpilation, bundling and module loading with Webpack
 
 ## Installation
 
@@ -29,7 +29,6 @@ Before running the install script do make sure to have all the necessary depende
 You will need the following package managers to initialize the Skeletal starter kit:
 
 > * [Node & Npm](https://nodejs.org/)
-> * [Bower](https://bower.io/)
 
 ### Npm Scripts
 
@@ -45,10 +44,16 @@ To create a production build of the project run:
 $ npm run build
 ```
 
-To run PageSpeed Insights on your project (provide the url in package.json) type:
+To run Critical CSS in your project (inline "above the fold" CSS) run:
 
 ```
-$ npm run pagespeed
+$ npm run postbuild
+```
+
+To run clean out the public folder type:
+
+```
+$ npm run clean
 ```
 
 ## Contributors
