@@ -9,11 +9,13 @@
 
    const debug        = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production') ? true : false;
    const pkg          = require('../../package.json');
+   const path         = require('path');
    const src_path     = 'src/';
    const dest_path    = 'public/';
    const namespace    = 'S_';
    const folders = {
      src: new function () {
+       this.root       = path.basename(path.join(__dirname, '../../')) + '/';
        this.assets     = 'assets/';
        this.scripts    = 'scripts/';
        this.tools      = 'tools/';
@@ -55,7 +57,10 @@
 
       browsersync: {
         port: 3000,
-        proxy: undefined
+        proxy: {
+          active: false,
+          target: 'http://localhost:80/' + folders.src.root + dest_path
+        }
       },
 
       uncss: {

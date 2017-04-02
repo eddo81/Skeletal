@@ -18,7 +18,6 @@ require('es6-promise').polyfill();
   'use strict';
 
   window.addEventListener('load', () => {
-    let app = document.getElementById('app');
 
     let skeletal = require('../framework/views/skeletal/skeletal.js');
     skeletal();

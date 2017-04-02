@@ -16,7 +16,11 @@
       path.join(__dirname, '../../../' + config.globs.root_src + config.globs.js.src)
     ]);
 
-    devSettings.output.publicPath = (config.tools.browsersync.proxy !== undefined) ? '/' + config.pkg.name + '/' + config.globs.root_dest : '/';
+    devSettings.output.publicPath = '/';
+
+    if(config.tools.browsersync.proxy.active === true) {
+      devSettings.output.publicPath += config.globs.folders.src.root + config.globs.root_dest;
+    }
 
     devSettings.plugins = devSettings.plugins.concat([
       new webpack.HotModuleReplacementPlugin(),

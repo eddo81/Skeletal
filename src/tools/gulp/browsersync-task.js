@@ -32,10 +32,10 @@ module.exports = function (gulp, plugins, config) {
       }
     };
 
-    if(config.tools.browsersync.proxy !== undefined) {
+    if(config.tools.browsersync.proxy.active === true) {
       options.browserSync.host = 'localhost';
       options.browserSync.proxy = {
-        target: config.tools.browsersync.proxy,
+        target: config.tools.browsersync.proxy.target,
         ws: true,
       };
     }
