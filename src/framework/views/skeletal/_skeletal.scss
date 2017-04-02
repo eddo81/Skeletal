@@ -7,7 +7,7 @@
  $logo-size: 10vw;
  $logo-size-min: 14rem;
 
-.s-container {
+.S_container {
   position: absolute;
   top: 0;
   left: 0;
@@ -23,17 +23,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(300deg, darken(rgba(#1976D2, 0.5), 1%), lighten(rgba($accent-color, 0.5), 1%));
-  background-color: darken($accent-color, 10%);
+  background-color: #1c1d21;
 
-  .s-container-figure {
+  .S_container-figure {
     width: $logo-size;
     height: $logo-size;
     min-width: $logo-size-min;
     min-height: $logo-size-min;
     position: relative;
 
-    .s-skull {
+    .S_skull {
       padding: 12%;
       border-radius: 100%;
     }
@@ -54,7 +53,7 @@
     }
   }
 
-  .s-container-title {
+  .S_container-title {
     color: #fff;
     font-size: 6rem;
     text-align: center;
@@ -64,20 +63,14 @@
     font-weight: $font-weight--bold;
     line-height: 0.7;
     word-break: keep-all;
-    text-shadow: 0.4rem 0.4rem 1.2rem rgba(0, 0, 0, 0.35);
-    transition: text-shadow $transition--sm ease-in, transform $transition--sm ease-in;
-
-    &:hover {
-      transform: scale3d(0.99, 0.99, 0.99);
-      text-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.7);
-    }
+    transition: transform $transition--sm ease-in;
 
     @media(min-width: $screen--md) {
       font-size: 8vw;
     }
   }
 
-  .s-container-paragraph {
+  .S_container-paragraph {
     color: #fff;
     font-size: 1.5rem;
     word-break: keep-all;
@@ -89,7 +82,7 @@
     }
   }
 
-  .s-button {
+  .S_button {
     margin-top: auto;
     min-height: 4.8rem;
     width: 20rem;
@@ -114,7 +107,7 @@
     }
   }
 
-  .s-side-menu {
+  .S_side-menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -139,12 +132,12 @@
       padding-top: 0;
     }
 
-    &.s-expanded {
+    &.S_expanded {
      transform: translate3d(0, 0, 0);
      opacity: 1;
     }
 
-    .s-close-button {
+    .S_close-button {
       position: absolute;
       top: 1.2rem;
       right: 1.2rem;
@@ -178,7 +171,7 @@
       }
     }
 
-    .s-side-menu-text {
+    .S_side-menu-text {
       padding: 1.5rem;
       line-height: 1.6;
       transform: translate3d(0, -50px, 0);
@@ -188,12 +181,12 @@
         max-width: 75%;
       }
 
-      .s-side-menu-title, .s-side-menu-paragraph {
+      .S_side-menu-title, .S_side-menu-paragraph {
         color: #31353D;
         text-transform: none;
       }
 
-      .s-side-menu-title {
+      .S_side-menu-title {
         white-space: nowrap;
         font-size: 4.5rem;
         margin-bottom: 1.5rem;
@@ -204,7 +197,7 @@
         }
       }
 
-      .s-side-menu-paragraph {
+      .S_side-menu-paragraph {
         font-size: 1.5rem;
         white-space: normal;
 
@@ -217,7 +210,7 @@
         }
       }
 
-      .s-side-menu-link {
+      .S_side-menu-link {
         display: inline-block;
 
         &:after {
@@ -250,7 +243,7 @@
       }
     }
 
-    .s-side-menu-footer {
+    .S_side-menu-footer {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -270,7 +263,7 @@
         font-size: 1.4rem;
       }
 
-      .s-side-menu-footer-link {
+      .S_side-menu-footer-link {
         color: #fff;
         opacity: 0.5;
         transition: opacity 0.3s ease-in-out;
