@@ -28,7 +28,7 @@
     "browser-sync": "^2.9.0",
     "critical": "^0.7.3",
     "cross-env": "^2.0.0",
-    "css-loader": "^0.26.1",
+    "css-loader": "^0.26.4",
     "del": "^2.2.0",
     "eslint": "^2.11.1",
     "eslint-config-google": "^0.3.0",
@@ -50,13 +50,18 @@
     "path": "^0.12.7",
     "raw-loader": "^0.5.1",
     "strip-loader": "^0.1.2",
+    "vue-loader": "^11.3.4",
+    "vue-template-compiler": "^2.2.6",
     "webpack": "^2.3.2",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.18.0"
   },
   "dependencies": {
     "animate.css": "^3.5.2",
-    "es6-promise": "^4.0.5"
+    "es6-promise": "^4.0.5",
+    "vue": "^2.2.6",
+    "vue-router": "^2.3.1",
+    "vuex": "^2.2.1"
   },
   "engines": {
     "node": ">=0.12"

@@ -28,6 +28,11 @@
           },
 
           {
+            test: extensions.vue,
+            loader: 'vue-loader'
+          },
+
+          {
             test: extensions.js,
             exclude: exclude,
             loader: 'babel-loader'
@@ -36,8 +41,10 @@
       },
 
       resolve: {
-        extensions: ['.js', '.es6'],
-        alias: { }
+        extensions: ['.js', '.es6', '.vue'],
+        alias: {
+          'vue$': 'vue/dist/vue.common.js'
+        }
       }
     };
 

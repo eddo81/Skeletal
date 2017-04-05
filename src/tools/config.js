@@ -47,6 +47,7 @@
         exclude: /(node_modules|bower_components)/,
         extensions: {
           js: [/\.(js|es6)$/i],
+          vue: [/\.vue$/],
           text: [/\.(html|xml|txt)$/i]
         }
       },
