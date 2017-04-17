@@ -5,9 +5,6 @@
     const path         = require('path');
     const prodSettings = require('./webpack.config.babel.js')(config);
 
-    // Loaders
-    const WebpackStrip = require('strip-loader');
-
     // Regex
     const exclude = config.tools.webpack.exclude;
     const extensions = config.tools.webpack.extensions;
@@ -18,18 +15,10 @@
       path.join(__dirname, '../../../' + config.globs.root_src + config.globs.js.src)
     ];
 
-    prodSettings.module.rules = prodSettings.module.rules.concat([
-      {
-        test: extensions.js,
-        exclude: exclude,
-        loader: WebpackStrip.loader('console.log')
-      }
-    ]);
-
     prodSettings.plugins = prodSettings.plugins.concat([
       new webpack.optimize.UglifyJsPlugin({
         output: { comments: false },
-        compress: { warnings: false },
+        compress: { warnings: false,  drop_console: true },
         mangle: { except: ['$', 'exports', 'require'] }
       }),
       new webpack.DefinePlugin({

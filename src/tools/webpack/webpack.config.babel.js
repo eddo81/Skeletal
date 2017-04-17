@@ -24,7 +24,9 @@
           {
              test: extensions.text,
              exclude: exclude,
-             loader: "raw-loader"
+             use: [
+              'raw-loader'
+             ]
           },
 
           {
@@ -35,7 +37,9 @@
           {
             test: extensions.js,
             exclude: exclude,
-            loader: 'babel-loader'
+            use: [
+              'babel-loader'
+            ]
           }
         ]
       },

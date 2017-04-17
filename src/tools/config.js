@@ -19,7 +19,7 @@
        this.assets     = 'assets/';
        this.scripts    = 'scripts/';
        this.tools      = 'tools/';
-       this.framework  = 'framework/';
+       this.framework  = 'vue/';
 
        this.style      = this.assets + 'scss/';
        this.images     = this.assets + 'images/';
@@ -48,6 +48,7 @@
         extensions: {
           js: [/\.(js|es6)$/i],
           vue: [/\.vue$/],
+          sass: [/\.s[a|c]ss$/],
           text: [/\.(html|xml|txt)$/i]
         }
       },

@@ -6,18 +6,6 @@
   </main>
 </template>
 
-<style>
-  
-  .fade-enter-active, .fade-leave-active {
-    /*transition: opacity ($transition--lg * 2) cubic-bezier(easing(12));*/
-    transition: opacity 300ms ease-in-out;
-  }
-  
-  .fade-enter, .fade-leave-to {
-    opacity: 0;
-  }
-</style>
-
 <script>
 
   export default {

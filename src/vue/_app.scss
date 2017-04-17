@@ -1,0 +1,17 @@
+/**
+ * _app.scss
+ * =========
+ *
+ *
+ */
+  
+  #app {
+
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity ($transition--lg * 2) cubic-bezier(easing(24)), transform ($transition--lg * 2) cubic-bezier(easing(24));
+    }
+  
+    .fade-enter, .fade-leave-to {
+      opacity: 0;
+    }
+  }
