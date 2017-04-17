@@ -1,7 +1,7 @@
 <template>
   <div id="Skeletal_home">
       <section>
-          <h1 class="test">{{msg}}</h1>
+          <h1>{{msg}}</h1>
       </section>
   </div>
 </template>
@@ -16,7 +16,7 @@
 
     data: function() {
       return {
-        msg: 'Hello World'
+        msg: 'Skeletal Vue'
       };
     },
 
