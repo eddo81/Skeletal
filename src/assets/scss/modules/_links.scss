@@ -8,7 +8,7 @@
 // Local variables
 $underline-height: 0.2rem;
 
-.FONDAB_underline {
+.S_underline {
   position: relative;
 
   &:after {
@@ -37,7 +37,7 @@ $underline-height: 0.2rem;
   }
 
   &--middle, &--right {
-    @extend .FONDAB_underline;
+    @extend .S_underline;
 
     &:after {
       right: 0;
