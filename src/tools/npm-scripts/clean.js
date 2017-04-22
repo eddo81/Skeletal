@@ -17,8 +17,6 @@
     '!' + config.globs.root_dest + 'app/**'
   ];
 
-  //config.globs.root_dest + '*', '!' + config.globs.root_dest + '.git'
-
   del(deletePaths).then(paths => {
     let msg = (paths.length) ? 'Deleting the following files and folders:\n': 'No files to delete.';
 
