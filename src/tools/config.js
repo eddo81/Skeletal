@@ -63,7 +63,7 @@
         port: 3000,
         proxy: {
           active: false,
-          target: 'http://localhost:80/' + folders.src.root + dest_path
+          target: server.localhost + server.public_path
         }
       },
 
@@ -111,7 +111,8 @@
 
       root_src: src_path,
       root_dest: dest_path,
-      folders: folders
+      folders: folders,
+      server: server
      },
 
      debug: debug,
