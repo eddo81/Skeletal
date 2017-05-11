@@ -26,7 +26,7 @@
 }
 
 /* uncss:ignore */
-.FONDAB_button {
+.S_button {
   @extend %button-placeholder;
   background-color: $divider-color;
   @include shadow(1, $black-color);
@@ -104,7 +104,7 @@
     }
   }
 
-  .FONDAB_material_icon {
+  .S_material_icon {
     position: relative;
     top: -1px;
     vertical-align: middle;
@@ -113,7 +113,7 @@
   }
 }
 
-input[type="submit"].FONDAB_button {
+input[type="submit"].S_button {
 
   &--accent {
     background-color: $accent-color !important;
