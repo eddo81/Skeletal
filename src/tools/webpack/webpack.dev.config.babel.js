@@ -19,7 +19,7 @@
     devSettings.output.publicPath = '/';
 
     if(config.tools.browsersync.proxy.active === true) {
-      devSettings.output.publicPath += config.globs.folders.src.root + config.globs.root_dest;
+      devSettings.output.publicPath += config.globs.server.public_path;
     }
 
     devSettings.plugins = devSettings.plugins.concat([

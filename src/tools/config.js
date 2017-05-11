@@ -13,6 +13,10 @@
    const src_path     = 'src/';
    const dest_path    = 'public/';
    const namespace    = 'S_';
+   const server       = {
+      localhost: 'http://localhost:80/',
+      public_path: folders.src.root + dest_path
+    };
    const folders = {
      src: new function () {
        this.root       = path.basename(path.join(__dirname, '../../')) + '/';
@@ -61,7 +65,7 @@
         port: 3000,
         proxy: {
           active: false,
-          target: 'http://localhost:80/' + folders.src.root + dest_path
+          target: server.localhost + server.public_path
         }
       },
 
@@ -109,7 +113,8 @@
 
       root_src: src_path,
       root_dest: dest_path,
-      folders: folders
+      folders: folders,
+      server: server
      },
 
      debug: debug,
