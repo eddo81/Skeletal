@@ -17,7 +17,7 @@ module.exports = (gulp, plugins, config) => {
 
     return gulp.src(config.globs.img.src)
       .pipe(plugins.newer(config.globs.img.dest))
-      .pipe(!config.debug ? plugins.imagemin() : plugins.util.noop())
+      .pipe(!config.debug ? plugins.imagemin(options.imagemin) : plugins.util.noop())
       .pipe(gulp.dest(config.globs.img.dest));
   });
 };
