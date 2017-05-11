@@ -13,6 +13,10 @@
    const src_path     = 'src/';
    const dest_path    = 'public/';
    const namespace    = 'S_';
+   const server       = {
+      localhost: 'http://localhost:80/',
+      public_path: folders.src.root + dest_path
+    };
    const folders = {
      src: new function () {
        this.root       = path.basename(path.join(__dirname, '../../')) + '/';
