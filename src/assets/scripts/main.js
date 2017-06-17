@@ -19,7 +19,7 @@ require('es6-promise').polyfill();
 
   window.addEventListener('load', () => {
 
-    let skeletal = require('../framework/views/skeletal/skeletal.js');
+    let skeletal = require('../../framework/views/skeletal/skeletal.js');
     skeletal();
 
   });
