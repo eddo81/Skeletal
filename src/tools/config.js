@@ -17,11 +17,11 @@
    const folders = {
      src: new function () {
        this.root       = path.basename(path.join(__dirname, '../../')) + '/';
-       this.assets     = 'assets/';
-       this.scripts    = 'scripts/';
+       this.assets     = 'assets/';       
        this.tools      = 'tools/';
        this.framework  = 'vue/';
 
+       this.scripts    = this.assets + 'scripts/';
        this.style      = this.assets + 'scss/';
        this.images     = this.assets + 'images/';
        this.videos     = this.assets + 'videos/';

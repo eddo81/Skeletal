@@ -34,6 +34,7 @@
     "curly": 1,
     "space-unary-ops": 1,
     "no-underscore-dangle": 1,
-    "quotes": [1, "single"]
+    "quotes": [1, "single"],
+    "import/no-unresolved": 0
   }
 }

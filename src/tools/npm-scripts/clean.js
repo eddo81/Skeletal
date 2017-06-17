@@ -14,7 +14,7 @@
     config.globs.root_dest + '.htaccess',
     config.globs.root_dest + '**',
     '!' + config.globs.root_dest.replace('/', ''),
-    '!' + config.globs.root_dest + 'app/**'
+    '!' + config.globs.root_dest + 'webservice/**'
   ];
 
   del(deletePaths).then(paths => {

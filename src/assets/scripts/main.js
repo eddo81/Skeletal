@@ -6,8 +6,8 @@
  */
 
 import Vue from 'vue';
-import Router from '../vue/router/_router.js';
-import Store from '../vue/store/_store.js';
+import Router from '../../vue/router/_router.js';
+import Store from '../../vue/store/_store.js';
 
 require('es6-promise').polyfill();
 
@@ -43,7 +43,7 @@ require('es6-promise').polyfill();
     el: '#app',
     store: Store,
     router: Router,
-    render: h => h(require('../vue/app.vue'))
+    render: h => h(require('../../vue/app.vue'))
   });
 
   window.addEventListener('load', () => {
